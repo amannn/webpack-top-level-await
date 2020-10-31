@@ -4,11 +4,13 @@
   "main": "index.js",
   "author": "Jan Amann <jan@amann.me>",
   "license": "MIT",
+  "type": "module",
   "scripts": {
-    "build": "webpack"
+    "build": "rollup src/index.js --file dist/main.rollup.js --format system"
   },
   "browserslist": "ie 11",
   "devDependencies": {
+    "rollup": "^2.32.1",
     "webpack": "^5.3.1",
     "webpack-cli": "^4.1.0"
   }
