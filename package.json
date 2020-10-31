@@ -5,10 +5,15 @@
   "author": "Jan Amann <jan@amann.me>",
   "license": "MIT",
   "scripts": {
-    "build": "webpack"
+    "build": "rm -rf ./dist && yarn build:webpack && yarn build:babel",
+    "build:webpack": "webpack",
+    "build:babel": "babel dist/main.webpack.js -o dist/main.babel.js"
   },
   "browserslist": "ie 11",
   "devDependencies": {
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.3",
+    "babel-plugin-transform-async-to-promises": "^0.8.15",
     "webpack": "^5.3.1",
     "webpack-cli": "^4.1.0"
   }
